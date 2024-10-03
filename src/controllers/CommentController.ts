@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 class CommentController {
     constructor() {}
 
-    async listComments(req: Request, res: Response) {
+    async listComments(req: Request, res: Response):Promise<any> {
         try {
             const comments = await prisma.comment.findMany();
             res.json(comments);

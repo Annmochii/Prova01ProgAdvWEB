@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 class UserController {
     constructor(){
     }
-    async listUser(req: Request, res: Response){
+    async listUser(req: Request, res: Response):Promise<any> {
         try {
             const users = await prisma.user.findMany();
             res.json(users);
@@ -19,7 +19,7 @@ class UserController {
         }
     }
 
-    async createUser(req: Request, res: Response) {
+    async createUser(req: Request, res: Response):Promise<any> {
         try {
             const userdata = req.body;
 
@@ -48,7 +48,7 @@ class UserController {
         }
     }
 
-    async updateUser(req: Request, res: Response) {
+    async updateUser(req: Request, res: Response):Promise<any> {
         try {
             const id = parseInt(req.params.id);
             const body = req.body;

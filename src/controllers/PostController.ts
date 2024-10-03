@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 class PostController {
     constructor() {}
 
-    async listPosts(req: Request, res: Response) {
+    async listPosts(req: Request, res: Response):Promise<any> {
         try {
             const posts = await prisma.post.findMany();
             res.json(posts);

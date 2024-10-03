@@ -1,9 +1,6 @@
 import { Router } from "express";
-
 import CommentController from "../controllers/CommentController";
-
 const CommentRouter = Router();
-
 
 //Listar usuários
 CommentRouter.get("/comments", CommentController.listComments);
