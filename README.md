@@ -21,9 +21,7 @@ Esse projeto contém os códigos da primeira prova de Programação Avançada pa
 
 ## Como usar:
 
-Primeiro, navegue pelas branchs e selecione a aula que deseja revisar.
-
-Em seguida, abra o terminal e digite:
+Primeiro, abra o terminal e digite:
 
 ```
 npm install
